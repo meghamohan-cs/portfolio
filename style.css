@@ -5,9 +5,11 @@
     font-family: 'poppins', sans-serif;
 }
 
+
 html{
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    overflow-x: hidden;
 }
 body {
     background-color: #081b29;
@@ -54,13 +56,14 @@ body {
     position: relative;
     width: 100%;
     justify-content: space-between;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     background-image: url("https://www.shutterstock.com/image-photo/blurred-background-futuristic-office-environment-600nw-2695413639.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
-    padding: 70px 10% 0;
+    padding: 100px 5% 50px;
 }
 
 .home-content {
@@ -105,7 +108,6 @@ body {
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    /*background: url("about1.png") no-repeat;*/
     background-size: cover;
     background-position: center;
     display: flex;
@@ -115,6 +117,9 @@ body {
 }
 
 .about {
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 5% 50px;
     font-size: 30px;
     text-align: center;
     color: rgb(237, 237, 240);
@@ -156,10 +161,12 @@ section {
 }
 
 .container1 {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     min-height: 500px;
-    padding: 75px 90px;
-    margin-left: 120px;
+    padding: 40px 20px;
+    margin-left: 0;
+    margin: auto;
 }
 
 .heading1 {
@@ -552,4 +559,60 @@ section {
 .contact-form form .send:hover{
     box-shadow: 0 0 5px cyan,
     0 0 25px cyan,0 0 50px cyan,0 0 100px cyan, 0 0 200px cyan;
+}
+
+@media (max-width: 768px) {
+    
+    .header {
+        padding: 15px 5%;
+    }
+    .navbar a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
+    .home-content h1 {
+        font-size: 35px;
+    }
+    .home-content h2 {
+        font-size: 24px;
+    }
+    .about-text h2, .sub-title {
+        font-size: 40px;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+    .radial-bars {
+        grid-template-columns: 1fr; 
+    }
+
+    .contact {
+        grid-template-columns: 1fr; 
+        padding: 50px 5%;
+        margin-top: 50px;
+    }
+    .contact-text h2 {
+        font-size: 40px;
+    }
+    .contact-form form input, .contact-form form textarea {
+        width: 100%; 
+    }
+
+    
+    .portfolio-content {
+        grid-template-columns: 1fr; 
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        display: none; 
+    }
+    .home-content h1 {
+        font-size: 28px;
+    }
 }
